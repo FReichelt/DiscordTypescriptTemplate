@@ -1,0 +1,2 @@
+# DiscordTypescriptTemplate
+DiscordTypescriptTemplate
