@@ -1,9 +1,3 @@
-/*
- * Created on Wed Apr 27 2022 17:50:18 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
- * Last modified on Wed Apr 27 2022 17:50:18 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
- * Copyright: © All rights reserved.
- * Filename: logger.ts
- */
 /* eslint-disable no-console */
 const clc = require('cli-color');
 

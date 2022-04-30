@@ -1,9 +1,3 @@
-/*
- * Created on Wed Apr 27 2022 17:48:02 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
- * Last modified on Wed Apr 27 2022 17:48:02 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
- * Copyright: © All rights reserved.
- * Filename: Command.ts
- */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-array-constructor */
 import path from 'path';

@@ -1,9 +1,3 @@
-/*
- * Created on Wed Apr 27 2022 17:50:32 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
- * Last modified on Wed Apr 27 2022 17:50:32 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
- * Copyright: © All rights reserved.
- * Filename: TemplateCommand.ts
- */
 import Command from '../../base/Command';
 import { CommandInteraction } from 'discord.js';
 import { SlashCommandBuilder } from '@discordjs/builders';

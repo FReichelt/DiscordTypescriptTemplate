@@ -1,9 +1,3 @@
-/*
- * Created on Wed Apr 27 2022 17:50:29 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
- * Last modified on Wed Apr 27 2022 17:50:29 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
- * Copyright: © All rights reserved.
- * Filename: .eslintrc.js
- */
 module.exports = {
     env: {
         commonjs: true,

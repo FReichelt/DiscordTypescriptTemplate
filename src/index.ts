@@ -1,9 +1,3 @@
-/*
- * Created on Wed Apr 27 2022 17:50:22 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
- * Last modified on Wed Apr 27 2022 17:50:22 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
- * Copyright: © All rights reserved.
- * Filename: index.ts
- */
 import Bot from './base/Bot';
 import languages from './utils/languages';
 import { readdir } from 'fs/promises';

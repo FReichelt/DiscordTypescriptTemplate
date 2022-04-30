@@ -1,10 +1,3 @@
-/*
- * Created on Wed Apr 27 2022 17:50:15 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
- * Last modified on Wed Apr 27 2022 17:50:15 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
- * Copyright: © All rights reserved.
- * Filename: languages.ts
- */
-
 import i18next from 'i18next';
 import Backend from 'i18next-node-fs-backend';
 import path from 'path';

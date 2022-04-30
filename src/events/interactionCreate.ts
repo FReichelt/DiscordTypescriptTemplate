@@ -1,9 +1,3 @@
-/*
- * Created on Wed Apr 27 2022 17:48:56 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
- * Last modified on Wed Apr 27 2022 17:48:56 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
- * Copyright: © All rights reserved.
- * Filename: interactionCreate.ts
- */
 import { Permissions } from 'discord.js';
 import Command from '../base/Command';
 import Bot from '../base/Bot';
@@ -62,11 +56,6 @@ module.exports = class {
                         neededPermissions.push(perm);
                     }
                 });
-                /*
-                 * if(!message.channel.permissionsFor(message.member).has("MENTION_EVERYONE") && (message.content.includes("@everyone") || message.content.includes("@here"))){
-                 *     return message.error("misc:EVERYONE_MENTION");
-                 * }
-                 */
                 if (!interaction.channel.nsfw && cmd.settings.nsfw) {
                     return interaction.error('misc:NSFW_COMMAND');
                 }
@@ -75,14 +64,6 @@ module.exports = class {
             if (!cmd.settings.enabled) {
                 return interaction.error('misc:COMMAND_DISABLED');
             }
-            // TODO: Check if the user has the required permissions
-            // if (
-            //     cmd.settings.ownerOnly &&
-            //     interaction.user.id !== client.config.owner.id
-            // ) {
-            //     return interaction.error("misc:OWNER_ONLY");
-            // }
-
             try {
                 await cmd.run(interaction, data);
             } catch (e) {

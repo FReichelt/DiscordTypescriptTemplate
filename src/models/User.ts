@@ -1,10 +1,3 @@
-/*
- * Created on Wed Apr 27 2022 17:49:34 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
- * Last modified on Wed Apr 27 2022 17:49:34 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
- * Copyright: © All rights reserved.
- * Filename: User.ts
- */
-
 import mongoose from 'mongoose';
 
 export interface UserInput {
