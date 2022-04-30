@@ -1,22 +1,22 @@
 import Command from '../../base/Command';
-import { CommandInteraction } from 'discord.js';
+import { CommandInteraction, Permissions } from 'discord.js';
 import { SlashCommandBuilder } from '@discordjs/builders';
 import IData from '../../utils/IData';
 
 const commandconfig = {
-    name: 'replaceme',
-    description: 'replaceme',
+    name: 'templatecommand',
+    description: 'This is a command!',
     enabled: true,
-    guildOnly: false,
+    guildOnly: true,
     aliases: [],
-    memberPermissions: [''],
+    memberPermissions: [],
     botPermissions: ['SEND_MESSAGES', 'EMBED_LINKS'],
-    nsfw: false,
-    ownerOnly: false,
+    nsfw: true,
+    ownerOnly: true,
     cooldown: 1000,
 };
 
-export default class Template extends Command {
+export default class Templatecommand extends Command {
     constructor(client) {
         super(client, {
             slashData: new SlashCommandBuilder().setName(commandconfig.name).setDescription(commandconfig.description),
@@ -35,10 +35,9 @@ export default class Template extends Command {
 
     /**
      * @param { CommandInteraction } interaction - The interaction object
-     * @param { Object } data - The mongodb data
+     * @param { IData } data - The mongodb data object
      */
     async run(interaction: CommandInteraction, data: IData) {
-        const client = this.client;
-        interaction.channel?.send('This command is not yet implemented.');
+        //Your code goes here
     }
 }
