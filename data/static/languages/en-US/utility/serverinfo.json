@@ -1,0 +1,9 @@
+{
+    "owner": "Owner",
+    "members": "Members",
+    "channels": "Channels",
+    "roles": "Roles",
+    "emojis": "Emojis",
+    "verification_level": "Verification Level",
+    "created_at": "Created At"
+}

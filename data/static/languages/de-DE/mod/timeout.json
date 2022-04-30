@@ -1,0 +1,8 @@
+{
+    "TIMEOUTED": "**{member}** wurde erfolgreich von dem Server getimeouted.",
+    "DESC": "Du wurdest von dem Server **{server}** getimeouted!",
+    "SELF": "Du kannst dich nicht selbst timeouten.",
+    "BOT": "Du kannst einen Bot nicht timeouten.",
+    "MOD": "Du kannst einen Moderator nicht timeouten.",
+    "INVALID_TIME": "**{member}** konnte nicht getimeouted werden, da die Zeit ungültig ist."
+}

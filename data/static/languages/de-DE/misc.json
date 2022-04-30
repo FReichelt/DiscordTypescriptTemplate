@@ -1,0 +1,11 @@
+{
+    "UPTIME": "Betriebszeit",
+    "DEVLOPER": "Entwickler",
+    "IS_MOD": "Du kannst dies nicht tun. Der Benutzer hat Moderations Rechte.",
+    "REASON": "Grund",
+    "ERROR_OCCURED": "Ein Fehler ist aufgetreten. Bitte versuche es später erneut und melde dich beim Support um uns dabei zu helfen diesen Fehler zu beheben.",
+    "ACTIVATE": "Aktivieren",
+    "REASON_TOO_LONG": "Der Grund darf nicht länger als 512 Zeichen sein.",
+    "NO_REASON": "Es wurde kein Grund angegeben.",
+    "SUPPORT_SERVER": "Support Server"
+}

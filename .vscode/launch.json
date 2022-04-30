@@ -1,0 +1,37 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Nodemon with JS Debugger",
+            "request": "launch",
+            "runtimeArgs": [
+                "run",
+                "dev"
+            ],
+            "runtimeExecutable": "yarn",
+            "skipFiles": [
+                "<node_internals>/**",
+                ".pnp.*"
+            ],
+            "type": "pwa-node"
+        },
+
+        {
+            "name": "Attach to nodemon",
+            "type": "node",
+            "request": "attach",
+            "restart": true,
+            "continueOnAttach": false,
+            "port": 9229,
+            "address": "localhost",
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "/usr/src/app",
+            "protocol": "inspector",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            
+        }
+    ]
+}

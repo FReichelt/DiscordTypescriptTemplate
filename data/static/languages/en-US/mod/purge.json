@@ -1,0 +1,14 @@
+{
+    "TOO_MANY": "You can only purge up to 100 messages at a time.",
+    "TOO_FEW": "You need to purge at least 2 messages.",
+    "START": "Purging **{count}** messages...",
+    "END": "Purged **{count}** messages.",
+    "USER_START": "Purging **{count}** messages from **{user}**...",
+    "USER_END": "Purged **{count}** messages from **{user}**.",
+    "BOT_START": "Purging **{count}** messages from bots...",
+    "BOT_END": "Purged **{count}** messages from bots.",
+    "BOT_CHANNEL_START": "Purging **{count}** messages from bots in {channel}...",
+    "BOT_CHANNEL_END": "Purged **{count}** messages from bots in {channel}.",
+    "USER_CHANNEL_START": "Purging **{count}** messages from **{user}** in {channel}...",
+    "USER_CHANNEL_END": "Purged **{count}** messages from **{user}** in {channel}."
+}

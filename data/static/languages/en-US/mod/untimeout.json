@@ -1,0 +1,7 @@
+{
+    "UNTIMEOUTED": "**{member}** was successfully untimeouted from the server.",
+    "DESC": "You got untimeouted from the server **{server}**!",
+    "SELF": "You can't untimeout yourself.",
+    "BOT": "You can't untimeout a bot.",
+    "MOD": "You can't untimeout a moderator."
+}

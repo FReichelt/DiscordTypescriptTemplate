@@ -1,0 +1,14 @@
+{
+    "TOO_MANY": "Du kannst nicht mehr als 100 Nachrichten löschen.",
+    "TOO_FEW": "Du musst mindestens 2 Nachrichten löschen.",
+    "END": "Du hast **{count}** Nachrichten gelöscht.",
+    "START": "Es werden **{count}** Nachrichten gelöscht...",
+    "USER_START": "Es werden **{count}** Nachrichten von **{user}** gelöscht...",
+    "USER_END": "Du hast **{count}** Nachrichten von **{user}** gelöscht.",
+    "BOT_START": "Es werden **{count}** Nachrichten von Bots gelöscht...",
+    "BOT_END": "Du hast **{count}** Nachrichten von Bots gelöscht.",
+    "BOT_CHANNEL_START": "Es werden **{count}** Nachrichten von Bots in {channel} gelöscht...",
+    "BOT_CHANNEL_END": "Du hast **{count}** Nachrichten von Bots in {channel} gelöscht.",
+    "CHANNEL_START": "Es werden **{count}** Nachrichten in {channel} gelöscht...",
+    "CHANNEL_END": "Du hast **{count}** Nachrichten in {channel} gelöscht."
+}

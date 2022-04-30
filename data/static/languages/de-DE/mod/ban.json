@@ -1,0 +1,7 @@
+{
+    "BANNED": "**{member}** wurde erfolgreich von dem Server gebannt.",
+    "DESC": "Du wurdest von dem Server **{server}** gebannt!",
+    "SELF": "Du kannst dich nicht selbst bannen.",
+    "BOT": "Du kannst einen Bot nicht bannen.",
+    "MOD": "Du kannst einen Moderator nicht bannen."
+}

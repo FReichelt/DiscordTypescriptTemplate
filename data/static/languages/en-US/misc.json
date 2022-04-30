@@ -1,0 +1,11 @@
+{
+    "UPTIME": "Uptime",
+    "DEVELOPER": "Developer",
+    "IS_MOD": "You cannot do this. The user has moderator rights.",
+    "ERROR_OCCURED": "An error occured. Please try again later and open a support ticket to help us solve this issue.",
+    "ACTIVATE": "Activate",
+    "REASON": "Reason:",
+    "REASON_TOO_LONG": "The reason cannot be longer than 512 characters.",
+    "NO_REASON": "No reason was given.",
+    "SUPPORT_SERVER": "Support Server"
+}

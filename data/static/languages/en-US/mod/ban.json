@@ -1,0 +1,7 @@
+{
+    "BANNED": "**{member}** was successfully banned from the server.",
+    "DESC": "You got banned from the server **{server}**!",
+    "SELF": "You can't ban yourself.",
+    "BOT": "You can't ban a bot.",
+    "MOD": "You can't ban a moderator."
+}

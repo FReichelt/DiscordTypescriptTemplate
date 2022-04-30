@@ -1,0 +1,24 @@
+#
+#  Created on Wed Apr 27 2022 17:56:40 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
+# Last modified on Wed Apr 27 2022 17:56:40 by Florian Reichelt | Fllooo | https://florian-reichelt.de | mail@florian-reichelt.de
+# Copyright: © All rights reserved.
+# Filename: docker-compose-dev.yml
+#
+
+version: '3'
+services:
+    mongodb-dev:
+        container_name: bot-mongodb-dev
+        image: 'bitnami/mongodb:latest'
+        volumes:
+            - mongodb:/bitnami/mongodb
+        environment:
+            - MONGODB_ROOT_PASSWORD=bot
+            - MONGODB_ROOT_USER=bot
+            - MONGODB_DATABASE=bot
+        ports:
+            - "50030:27017"
+
+volumes:
+    mongodb:
+        driver: local

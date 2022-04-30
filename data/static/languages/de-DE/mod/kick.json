@@ -1,0 +1,7 @@
+{
+    "KICKED": "**{member}** wurde erfolgreich vom Server gekickt.",
+    "DESC": "Du wurdest von dem Server **{server}** gekickt!",
+    "SELF": "Du kannst dich nicht selbst kicken.",
+    "BOT": "Du kannst einen Bot nicht kicken.",
+    "MOD": "Du kannst einen Moderator nicht kicken."
+}

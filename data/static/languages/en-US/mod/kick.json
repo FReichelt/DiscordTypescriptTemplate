@@ -1,0 +1,7 @@
+{
+    "KICKED": "**{member}** was successfully kicked from the server.",
+    "DESC": "You got kicked from the server **{server}**!",
+    "SELF": "You can't kick yourself.",
+    "BOT": "You can't kick a bot.",
+    "MOD": "You can't kick a moderator."
+}

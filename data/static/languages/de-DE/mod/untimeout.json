@@ -1,0 +1,7 @@
+{
+    "TIMEOUTED": "**{member}** wurde erfolgreich aus dem Timeout entfernt.",
+    "DESC": "Du wurdest auf dem Server **{server}** aus dem Timeout entfernt!",
+    "SELF": "Du kannst dich nicht selbst aus dem Timeout entfernen.",
+    "BOT": "Du kannst einen Bot nicht aus dem Timeout entfernen.",
+    "MOD": "Du kannst einen Moderator nicht aus dem Timeout entfernen."
+}
