@@ -16,7 +16,7 @@
 
 #Local MongoDB data
 mongodb/
-data/config/
+data/config/config.json
 
 #Typescript build folder
 build/

@@ -11,7 +11,7 @@ import { Client, Collection, Guild, GuildMember, Intents, User } from 'discord.j
 import path from 'path';
 
 import config from '../../data/config/config.json';
-import customEmojis from '../../data/static/emojis.json';
+import customEmojis from '../../data/config/emojis.json';
 
 import guildsData from '../models/Guild';
 import usersData from '../models/User';
@@ -21,6 +21,7 @@ import logger from '../utils/logger';
 import Command from './Command';
 
 import { TFunction, TOptions } from 'i18next';
+import languages from '../../data/static/languages.json';
 
 import ms, { StringValue } from 'ms';
 export default class Bot extends Client {
@@ -71,6 +72,7 @@ export default class Bot extends Client {
          */
 
         this.translations = new Map();
+        this.languages = languages;
     }
 
     config: typeof config;
@@ -92,6 +94,8 @@ export default class Bot extends Client {
     logger: typeof logger;
 
     translations: Map<string, TFunction>;
+
+    languages: typeof languages;
 
     get defaultLanguage() {
         return this.config.defaultLanguage;
