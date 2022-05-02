@@ -309,6 +309,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-win32-x64-msvc@npm:^1.2.174":
+  version: 1.2.174
+  resolution: "@swc/core-win32-x64-msvc@npm:1.2.174"
+  checksum: b664000fb1e6f195fad405c9a925c2401a38b94672c585b0dd0c5b43d952f31bd977d59988ba55676b63941f32024453892f57a5e77b36de7a9097c258feaa3f
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@swc/core@npm:^1.2.165":
   version: 1.2.165
   resolution: "@swc/core@npm:1.2.165"
@@ -990,6 +998,7 @@ __metadata:
     "@discordjs/builders": ^0.12.0
     "@discordjs/rest": ^0.3.0
     "@swc/core": ^1.2.165
+    "@swc/core-win32-x64-msvc": ^1.2.174
     "@swc/helpers": ^0.3.8
     "@types/eslint": ^8.4.1
     "@types/mongoose": ^5.11.97
