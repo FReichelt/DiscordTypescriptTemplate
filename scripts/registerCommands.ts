@@ -1,6 +1,7 @@
 import Bot from '../src/base/Bot';
 import fs from 'fs';
 import util from 'util';
+
 const readdir = util.promisify(fs.readdir);
 const client = new Bot();
 import { REST } from '@discordjs/rest';
@@ -13,18 +14,18 @@ const start = async () => {
     client.logger.info('Starting Command Initializer...');
 
     const directories = await readdir('./src/commands/');
-    directories.forEach(async dir => {
+    for (const dir of directories) {
         const commands = await readdir(`./src/commands/${dir}/`);
         commands
             .filter(cmd => cmd.split('.').pop() === 'ts')
             .forEach(cmd => {
                 client.loadCommand(`${dir}${path.sep}${cmd}`, cmd);
             });
-    });
+    }
 
     await client.login(client.config.token);
 
-    registerCommands(client.slashCommandData, client.guildSlashCommandData, client.user.id);
+    registerCommands(client.slashCommandData, client.guildSlashCommandData, client.user?.id);
 };
 
 async function registerCommands(slashCommandData, guildSlashCommandData, applicationId) {

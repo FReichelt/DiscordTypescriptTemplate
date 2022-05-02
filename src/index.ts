@@ -23,7 +23,7 @@ const start = async () => {
     const directories = await readdir('./src/commands');
 
     // Search for all commands of every category
-    directories.forEach(async dir => {
+    for (const dir of directories) {
         const commands = await readdir(`./src/commands/${dir}/`);
         commands
             // Filter out all files that are not .ts files
@@ -33,18 +33,18 @@ const start = async () => {
                 // Load command and add it to the command collection
                 client.loadCommand(`${dir}${path.sep}${cmd}`, cmd);
             });
-    });
+    }
 
     client.logger.info(`Loaded a total of ${cmds} commands.`);
 
     const evtFiles = await readdir('./src/events/');
     client.logger.info(`Loading a total of ${evtFiles.length} events.`);
-    evtFiles.forEach(async file => {
+    for (const file of evtFiles) {
         const eventName = file.split('.')[0];
         client.logger.info(`Loading Event: ${eventName}`);
         const event = new (await import(`./events/${file}`)).default(client);
         client.on(eventName, (...args) => event.run(...args));
-    });
+    }
 
     await client.login(client.config.token);
     try {
