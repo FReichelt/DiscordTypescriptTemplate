@@ -1,20 +1,27 @@
 import mongoose from 'mongoose';
 
 export interface MemberInput {
-    id: string;
+    memberId: string;
     language: string;
+    guildId: string;
 }
 
 export interface MemberDocument extends MemberInput, mongoose.Document {
-    id: string;
+    memberId: string;
     language: string;
+    guildId: string;
 }
 
 const memberSchema = new mongoose.Schema({
-    id: {
+    memberId: {
         type: String,
         required: true,
-        unique: true,
+        unique: false,
+    },
+    guildId: {
+        type: String,
+        required: true,
+        unique: false,
     },
 });
 
