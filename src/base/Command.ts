@@ -4,7 +4,7 @@ import path from 'path';
 import Bot from './Bot';
 import { SlashCommandBuilder } from '@discordjs/builders';
 import CommandConfig from '../utils/ICommandConfig';
-import { CommandInteraction } from 'discord.js';
+import { CommandInteraction, PermissionResolvable } from 'discord.js';
 import IData from '../utils/IData';
 
 export default class Command {
@@ -32,8 +32,8 @@ export default class Command {
         name: string;
         enabled: boolean;
         guildOnly: boolean;
-        botPermissions: (bigint | string)[];
-        memberPermissions: (bigint | string)[];
+        botPermissions: PermissionResolvable[];
+        memberPermissions: PermissionResolvable[];
         nsfw: boolean;
         ownerOnly: boolean;
         cooldown: number;
