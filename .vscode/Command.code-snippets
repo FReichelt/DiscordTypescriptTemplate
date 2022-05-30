@@ -15,7 +15,7 @@
             "    guildOnly: ${4|true,false|},",
             "    aliases: [${5}],",
             "    memberPermissions: [${6}],",
-            "    botPermissions: [${7:'SEND_MESSAGES', 'EMBED_LINKS'}],",
+            "    botPermissions: [${7:Permissions.FLAGS.SEND_MESSAGES, Permissions.FLAGS.EMBED_LINKS}],",
             "    nsfw: ${8|true,false|},",
             "    ownerOnly: ${9|true,false|},",
             "    cooldown: ${10|1000,3000,5000,15000,30000,60000|},",
