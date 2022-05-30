@@ -163,7 +163,7 @@ export default class Bot extends Client {
 
     // This function is used to find a guild data or create it
     async findOrCreateGuild(guildID) {
-        let guildData = await this.guildsData.findOne({ guildId: guildID });
+        let guildData = await this.guildsData.findOne({ id: guildID });
         if (guildData) {
             return guildData;
         }
