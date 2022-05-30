@@ -156,7 +156,7 @@ export default class Bot extends Client {
         if (memberData) {
             return memberData;
         }
-        memberData = new this.membersData({ id: memberID, guildId: guildID });
+        memberData = new this.membersData({ memberId: memberID, guildId: guildID });
         await memberData.save();
         return memberData;
     }
