@@ -1,4 +1,5 @@
 import { SlashCommandBuilder } from '@discordjs/builders';
+import { PermissionResolvable } from 'discord.js';
 
 export interface ICommandConfig {
     slashData: SlashCommandBuilder | Omit<SlashCommandBuilder, 'addSubcommandGroup' | 'addSubcommand'>;
@@ -7,8 +8,8 @@ export interface ICommandConfig {
     dirname: string;
     enabled: boolean;
     guildOnly: boolean;
-    botPermissions: (bigint | string)[];
-    memberPermissions: (bigint | string)[];
+    botPermissions: PermissionResolvable[];
+    memberPermissions: PermissionResolvable[];
     nsfw: boolean;
     ownerOnly: boolean;
     cooldown: number;
@@ -21,8 +22,8 @@ export default class CommandConfig implements ICommandConfig {
     dirname: string;
     enabled: boolean;
     guildOnly: boolean;
-    botPermissions: (bigint | string)[];
-    memberPermissions: (bigint | string)[];
+    botPermissions: PermissionResolvable[];
+    memberPermissions: PermissionResolvable[];
     nsfw: boolean;
     ownerOnly: boolean;
     cooldown: number;
