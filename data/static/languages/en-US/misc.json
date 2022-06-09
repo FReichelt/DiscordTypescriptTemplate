@@ -7,5 +7,7 @@
     "REASON": "Reason:",
     "REASON_TOO_LONG": "The reason cannot be longer than 512 characters.",
     "NO_REASON": "No reason was given.",
-    "SUPPORT_SERVER": "Support Server"
+    "SUPPORT_SERVER": "Support Server",
+    "COMMAND_MISSING_BOT_PERMISSIONS": "The bot doesn't have enough permissions to execute this command for you. The following permissions are missing: {{permissions}}",
+    "COMMAND_MISSING_MEMBER_PERMISSIONS": "You don't have enough permissions to execute this command. The following permissions are missing: {{permissions}}"
 }

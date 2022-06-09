@@ -1,5 +1,5 @@
 /* eslint-disable func-names */
-import { Guild, CommandInteraction } from 'discord.js';
+import { Guild, CommandInteraction, MessageEmbed } from 'discord.js';
 import Bot from '../base/Bot';
 import { GuildDocument } from '../models/Guild';
 import { TOptions } from 'i18next';
@@ -28,6 +28,7 @@ declare module 'discord.js' {
     interface CommandInteraction {
         client: Bot;
         translate(key: string, args?: TOptions): string;
+        error(key: string, args?: TOptions): boolean;
     }
 }
 
@@ -43,6 +44,21 @@ CommandInteraction.prototype.translate = function (key: string, args?: TOptions)
     );
     if (!language) throw new Error('Message: Invalid language set in data.');
     return language(key, args);
+};
+
+CommandInteraction.prototype.error = function (key: string, args?: TOptions) {
+    try {
+        const language = this.client.translations.get(
+            this.guild ? this.guild.data.language : this.client.config.defaultLanguage,
+        );
+        if (!language) throw new Error('Message: Invalid language set in data.');
+        this.reply({
+            embeds: [new MessageEmbed().setColor('#ff0000').setDescription(language(key, args))],
+        });
+        return true;
+    } catch (error) {
+        return false;
+    }
 };
 
 export function initExtenders() {

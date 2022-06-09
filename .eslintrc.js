@@ -22,5 +22,6 @@ module.exports = {
         '@typescript-eslint/no-var-requires': 'off',
         'prefer-template': 'warn',
         'linebreak-style': ['error', 'unix'],
+        '@typescript-eslint/no-non-null-assertion': 'off',
     },
 };

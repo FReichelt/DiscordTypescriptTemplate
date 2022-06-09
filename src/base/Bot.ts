@@ -91,6 +91,13 @@ export default class Bot extends Client {
 
     languages: typeof languages;
 
+    flipObject(obj) {
+        return Object.keys(obj).reduce((ret, key) => {
+            ret[obj[key]] = key;
+            return ret;
+        }, {});
+    }
+
     get defaultLanguage() {
         return this.config.defaultLanguage;
     }
