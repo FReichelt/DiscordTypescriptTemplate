@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const clc = require('cli-color');
+import clc from 'cli-color';
 
 export default class Logger {
     static log(message, type) {
