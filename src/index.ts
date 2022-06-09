@@ -1,6 +1,6 @@
 import Bot from './base/Bot';
 import languages from './utils/languages';
-import { readdir } from 'fs/promises';
+import { readdir, lstat } from 'fs/promises';
 import mongoose from 'mongoose';
 import path from 'path';
 import { initExtenders } from './utils/extenders';
@@ -39,11 +39,25 @@ const start = async () => {
 
     const evtFiles = await readdir('./src/events/');
     client.logger.info(`Loading a total of ${evtFiles.length} events.`);
-    for (const file of evtFiles) {
-        const eventName = file.split('.')[0];
-        client.logger.info(`Loading Event: ${eventName}`);
-        const event = new (await import(`./events/${file}`)).default(client);
-        client.on(eventName, (...args) => event.run(...args));
+
+    for (const path of evtFiles) {
+        const stat = await lstat(`./src/events/${path}`);
+        if (stat.isFile()) {
+            const eventName = path.split('.')[0];
+            client.logger.info(`Loading Event: ${eventName}`);
+            const event = new (await import(`./events/${path}`)).default(client);
+            client.on(eventName, (...args) => event.run(...args));
+        } else if (stat.isDirectory()) {
+            const eventName = path.split('.')[0];
+            client.logger.info(`Loading all ${eventName} subevents...`);
+            const eventFiles = await readdir(`./src/events/${path}`);
+            for (const file of eventFiles) {
+                const eventName = file.split('.')[0];
+                client.logger.info(`Loading ${path} subevent: ${eventName}`);
+                const event = new (await import(`./events/${path}/${file}`)).default(client);
+                client.on(path, (...args) => event.run(...args));
+            }
+        }
     }
 
     await client.login(client.config.token);

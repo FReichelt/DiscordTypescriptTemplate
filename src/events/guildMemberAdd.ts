@@ -1,7 +1,7 @@
 import Bot from '../base/Bot';
 import IData from '../utils/IData';
 
-module.exports = class {
+export default class {
     constructor(private client: Bot) {
         this.client = client;
     }
@@ -22,4 +22,4 @@ module.exports = class {
         const userData = await client.findOrCreateUser(member.user.id);
         if (userData) data.user = member.user.data = userData;
     }
-};
+}

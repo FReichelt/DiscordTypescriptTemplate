@@ -1,12 +1,13 @@
 import IData from '../utils/IData';
 import Bot from '../base/Bot';
+import { Message } from 'discord.js';
 
 export default class {
     constructor(private client: Bot) {
         this.client = client;
     }
 
-    async run(message) {
+    async run(message: Message) {
         const data: IData = {};
 
         if (message.author.bot || message.channel.type === 'DM') return;
@@ -22,15 +23,15 @@ export default class {
         }
 
         if (message.guild) {
-            const memberData = await client.findOrCreateMember(message.member.id, message.guild.id);
+            const memberData = await client.findOrCreateMember(message.author.id, message.guild.id);
             data.member = memberData;
             // eslint-disable-next-line require-atomic-updates
-            message.member.data = memberData;
+            message.member!.data = memberData;
         }
 
         const userData = await client.findOrCreateUser(message.author.id);
         data.user = userData;
         // eslint-disable-next-line require-atomic-updates
-        message.user = userData;
+        message.author.data = userData;
     }
 }
