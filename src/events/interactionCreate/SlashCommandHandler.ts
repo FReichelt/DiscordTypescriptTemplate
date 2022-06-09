@@ -1,7 +1,7 @@
-import { Permissions } from 'discord.js';
-import Command from '../base/Command';
-import Bot from '../base/Bot';
-import IData from '../utils/IData';
+import { Permissions, PermissionResolvable } from 'discord.js';
+import Command from '../../base/Command';
+import Bot from '../../base/Bot';
+import IData from '../../utils/IData';
 
 module.exports = class {
     constructor(private client: Bot) {
@@ -47,11 +47,11 @@ module.exports = class {
 
         if (cmd) {
             if (interaction.guild) {
-                const neededPermissions: (string | BigInt)[] = [];
+                const neededPermissions: PermissionResolvable[] = [];
                 if (!cmd.settings.botPermissions.includes(Permissions.FLAGS.EMBED_LINKS)) {
                     cmd.settings.botPermissions.push(Permissions.FLAGS.EMBED_LINKS);
                 }
-                cmd.settings.botPermissions.forEach((perm: string | BigInt) => {
+                cmd.settings.botPermissions.forEach((perm: PermissionResolvable) => {
                     if (!interaction.channel.permissionsFor(interaction.guild.me).has(perm)) {
                         neededPermissions.push(perm);
                     }
